@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Location Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="welcome-screen">
+      <div class="welcome-container">
+        <h1>Welcome to Live GPS Tracker</h1>
+        <input type="text" id="username" placeholder="Enter your name" maxlength="20">
+        <button onclick="startTracking()">Start Tracking</button>
+      </div>
+    </div>
+
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+      <p>Getting your location...</p>
+    </div>
+
+    <div id="user-panel">
+      <div class="panel-header">
+        <div class="connection-info">
+          <div id="connection-status" class="connected"></div>
+          <span id="status-text">Connected</span>
+        </div>
+        <button id="theme-toggle" title="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+      <div id="user-list"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="error-message" class="hidden">
+      <i class="fas fa-exclamation-circle"></i>
+      <span id="error-text"></span>
+      <button onclick="this.parentElement.classList.add('hidden')">×</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
