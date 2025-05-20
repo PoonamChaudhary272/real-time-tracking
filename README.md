@@ -25,7 +25,7 @@ View Engine: EJS
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/realtime-location-tracker.git
+git clone https://github.com/PoonamChaudhary272/realtime-location-tracker.git
 cd realtime-location-tracker
 ```
 <h2>Install dependencies</h2>
